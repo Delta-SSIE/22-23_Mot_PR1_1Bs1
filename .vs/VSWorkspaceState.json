@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\test",
+    "\\test\\test"
   ],
-  "SelectedNode": "\\C:\\Users\\mottja\\source\\PR1-1B-1S",
+  "SelectedNode": "\\test\\test\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
