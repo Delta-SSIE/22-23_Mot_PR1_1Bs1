@@ -73,9 +73,23 @@ namespace Uvod
             int x1 = int.Parse(Console.ReadLine());
             int y1 = int.Parse(Console.ReadLine());
             Convert.ToInt16(y1);
-            int vys = x1+y1;
+            int vys = x1 + y1;
             Console.WriteLine(vys);
-            
+
+            //Převaděč času (viz. cvičení replit)
+            Console.Write("Zadej mi sekundy a já je převedu na hodiny, minuty a sekundy: ");
+            long x1 = long.Parse(Console.ReadLine());
+            long s, m, h;
+            s = x1 % 60;
+            m = (x1 - s) / 60;
+            m = m % 60;
+            h = (((x1 - s) / 60) - m) / 60;
+            Console.WriteLine("Hodiny: " + h);
+            Console.WriteLine("Minuty: " + m);
+            Console.WriteLine("Sekundy " + s);
+
+
+
 
 
         }
