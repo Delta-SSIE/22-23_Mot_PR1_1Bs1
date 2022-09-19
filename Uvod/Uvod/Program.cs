@@ -55,6 +55,8 @@ namespace Uvod
             //Výpis
             Console.WriteLine(a + b + c);
 
+
+
             
         }
     }
