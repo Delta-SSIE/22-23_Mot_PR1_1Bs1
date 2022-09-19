@@ -55,9 +55,29 @@ namespace Uvod
             //Výpis
             Console.WriteLine(a + b + c);
 
+            //Vstup od uživatele
+            string pozdrav = Console.ReadLine();
+            Console.WriteLine(pozdrav);
 
+            //Datový typ int a long
+            long xx = 51515151515151515;
+            Console.WriteLine(xx);
 
+            //Datový typ float a double
+            float flo = 1.151f;
+            double dou = 5.12312131d;
+            Console.WriteLine(flo);
+            Console.WriteLine(dou);
+
+            //Kalkulačka
+            int x1 = int.Parse(Console.ReadLine());
+            int y1 = int.Parse(Console.ReadLine());
+            Convert.ToInt16(y1);
+            int vys = x1+y1;
+            Console.WriteLine(vys);
             
+
+
         }
     }
 }
