@@ -1,0 +1,14 @@
+C:\Users\mottja\source\PR1-1B-1S\Operatory\Operatory\bin\Debug\netcoreapp3.1\Operatory.exe
+C:\Users\mottja\source\PR1-1B-1S\Operatory\Operatory\bin\Debug\netcoreapp3.1\Operatory.deps.json
+C:\Users\mottja\source\PR1-1B-1S\Operatory\Operatory\bin\Debug\netcoreapp3.1\Operatory.runtimeconfig.json
+C:\Users\mottja\source\PR1-1B-1S\Operatory\Operatory\bin\Debug\netcoreapp3.1\Operatory.runtimeconfig.dev.json
+C:\Users\mottja\source\PR1-1B-1S\Operatory\Operatory\bin\Debug\netcoreapp3.1\Operatory.dll
+C:\Users\mottja\source\PR1-1B-1S\Operatory\Operatory\bin\Debug\netcoreapp3.1\Operatory.pdb
+C:\Users\mottja\source\PR1-1B-1S\Operatory\Operatory\obj\Debug\netcoreapp3.1\Operatory.csproj.AssemblyReference.cache
+C:\Users\mottja\source\PR1-1B-1S\Operatory\Operatory\obj\Debug\netcoreapp3.1\Operatory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mottja\source\PR1-1B-1S\Operatory\Operatory\obj\Debug\netcoreapp3.1\Operatory.AssemblyInfoInputs.cache
+C:\Users\mottja\source\PR1-1B-1S\Operatory\Operatory\obj\Debug\netcoreapp3.1\Operatory.AssemblyInfo.cs
+C:\Users\mottja\source\PR1-1B-1S\Operatory\Operatory\obj\Debug\netcoreapp3.1\Operatory.csproj.CoreCompileInputs.cache
+C:\Users\mottja\source\PR1-1B-1S\Operatory\Operatory\obj\Debug\netcoreapp3.1\Operatory.dll
+C:\Users\mottja\source\PR1-1B-1S\Operatory\Operatory\obj\Debug\netcoreapp3.1\Operatory.pdb
+C:\Users\mottja\source\PR1-1B-1S\Operatory\Operatory\obj\Debug\netcoreapp3.1\Operatory.genruntimeconfig.cache
