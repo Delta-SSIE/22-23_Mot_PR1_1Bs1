@@ -1,0 +1,14 @@
+C:\Users\mottja\source\PR1-1B-1S\Ukol Replit – Kladné, nebo záporné\Ukol Replit – Kladné, nebo záporné\bin\Debug\netcoreapp3.1\Ukol Replit – Kladné, nebo záporné.exe
+C:\Users\mottja\source\PR1-1B-1S\Ukol Replit – Kladné, nebo záporné\Ukol Replit – Kladné, nebo záporné\bin\Debug\netcoreapp3.1\Ukol Replit – Kladné, nebo záporné.deps.json
+C:\Users\mottja\source\PR1-1B-1S\Ukol Replit – Kladné, nebo záporné\Ukol Replit – Kladné, nebo záporné\bin\Debug\netcoreapp3.1\Ukol Replit – Kladné, nebo záporné.runtimeconfig.json
+C:\Users\mottja\source\PR1-1B-1S\Ukol Replit – Kladné, nebo záporné\Ukol Replit – Kladné, nebo záporné\bin\Debug\netcoreapp3.1\Ukol Replit – Kladné, nebo záporné.runtimeconfig.dev.json
+C:\Users\mottja\source\PR1-1B-1S\Ukol Replit – Kladné, nebo záporné\Ukol Replit – Kladné, nebo záporné\bin\Debug\netcoreapp3.1\Ukol Replit – Kladné, nebo záporné.dll
+C:\Users\mottja\source\PR1-1B-1S\Ukol Replit – Kladné, nebo záporné\Ukol Replit – Kladné, nebo záporné\bin\Debug\netcoreapp3.1\Ukol Replit – Kladné, nebo záporné.pdb
+C:\Users\mottja\source\PR1-1B-1S\Ukol Replit – Kladné, nebo záporné\Ukol Replit – Kladné, nebo záporné\obj\Debug\netcoreapp3.1\Ukol Replit – Kladné, nebo záporné.csproj.AssemblyReference.cache
+C:\Users\mottja\source\PR1-1B-1S\Ukol Replit – Kladné, nebo záporné\Ukol Replit – Kladné, nebo záporné\obj\Debug\netcoreapp3.1\Ukol Replit – Kladné, nebo záporné.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mottja\source\PR1-1B-1S\Ukol Replit – Kladné, nebo záporné\Ukol Replit – Kladné, nebo záporné\obj\Debug\netcoreapp3.1\Ukol Replit – Kladné, nebo záporné.AssemblyInfoInputs.cache
+C:\Users\mottja\source\PR1-1B-1S\Ukol Replit – Kladné, nebo záporné\Ukol Replit – Kladné, nebo záporné\obj\Debug\netcoreapp3.1\Ukol Replit – Kladné, nebo záporné.AssemblyInfo.cs
+C:\Users\mottja\source\PR1-1B-1S\Ukol Replit – Kladné, nebo záporné\Ukol Replit – Kladné, nebo záporné\obj\Debug\netcoreapp3.1\Ukol Replit – Kladné, nebo záporné.csproj.CoreCompileInputs.cache
+C:\Users\mottja\source\PR1-1B-1S\Ukol Replit – Kladné, nebo záporné\Ukol Replit – Kladné, nebo záporné\obj\Debug\netcoreapp3.1\Ukol Replit – Kladné, nebo záporné.dll
+C:\Users\mottja\source\PR1-1B-1S\Ukol Replit – Kladné, nebo záporné\Ukol Replit – Kladné, nebo záporné\obj\Debug\netcoreapp3.1\Ukol Replit – Kladné, nebo záporné.pdb
+C:\Users\mottja\source\PR1-1B-1S\Ukol Replit – Kladné, nebo záporné\Ukol Replit – Kladné, nebo záporné\obj\Debug\netcoreapp3.1\Ukol Replit – Kladné, nebo záporné.genruntimeconfig.cache
