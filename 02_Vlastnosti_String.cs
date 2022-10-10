@@ -36,8 +36,53 @@ namespace Vlastnosti_string
             //Výpis od indexu
             Console.WriteLine(text.Substring(7));
 
-            //Oběšenec
+            //Oběšenec, trénink indexování
+            Console.WriteLine("Vítej ve hře Šibenice. Nejdříve zadej slovo složené z 3 písmen");
+            string hadanka = Console.ReadLine();
+            string uhodl = "";
+            int skore = 0;
 
+            Console.Write("Hádej první písmeno ");
+            char p1 = char.Parse(Console.ReadLine());
+            if (p1 == hadanka[0])
+            {
+                skore = skore + 1;
+                uhodl = uhodl + p1;
+            } else
+            {
+                uhodl = uhodl + " ";
+            }
+
+            Console.Write("Hádej druhé písmeno ");
+            char p2 = char.Parse(Console.ReadLine());
+            if (p2 == hadanka[1])
+            {
+                skore = skore + 1;
+                uhodl = uhodl + p2;
+            }
+            else
+            {
+                uhodl = uhodl + " ";
+            }
+
+            Console.Write("Hádej třetí písmeno ");
+            char p3 = char.Parse(Console.ReadLine());
+            if (p3 == hadanka[2])
+            {
+                skore = skore + 1;
+                uhodl = uhodl + p3;
+            }
+            else
+            {
+                uhodl = uhodl + " ";
+            }
+
+            Console.WriteLine($"Konec hry. Z tajenky ti vychází: {uhodl} a získal si {skore} bod/y!");
+
+            //Speciální
+            Console.WriteLine("Jednoduchou uvozovku napšíše \' a dvojitou takhle \" .");
+            Console.WriteLine("Řádek se zalamuje \nTohle je nový řádek, který také zalomím \nTohle je nový řádek!");
         }
     }
 }
+ 
