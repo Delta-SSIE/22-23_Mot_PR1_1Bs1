@@ -10,21 +10,84 @@ namespace lode_basic
             int[,] planek = Naplnpole0(4,4);
             int[,] hracipole = Naplnpole0(4, 4);
 
-            hracipole = RozmistLode(hracipole, 4, 1);
             int pocetlodi = 4;
+            hracipole = RozmistLode(hracipole, pocetlodi, 1);
+            
 
             while (true)
             {
-                Console.WriteLine("HRACÍ PLÁN");
-                VypisPole(planek);
-                Console.WriteLine($"Stávají počet lodí je {pocetlodi}");
+               Console.WriteLine("HRACÍ PLÁN");
+               VypisPole(planek);
+               Console.WriteLine($"Stávají počet lodí je {pocetlodi}");
+                //Testovací vypsání hracího pole
+                VypisPole(hracipole);
+                hracipole = TahHrace(planek, hracipole);
+               planek = UpravPlanek(planek, hracipole);
+                Console.Clear();
          
             }
 
-            //Testovací vypsání hracího pole
-            VypisPole(hracipole);
 
         }
+
+        //Metoda pro úpravu plánku
+        static int[,] UpravPlanek(int[,] planek, int[,] hracipole)
+        {
+            for (int i = 0; i < hracipole.GetLength(0); i++)
+            {
+                for (int j = 0; j < hracipole.GetLength(1); j++)
+                {
+                    if (hracipole[i,j] == 5)
+                    {
+                        planek[i, j] = 1;
+                    }
+                }
+            }
+            return planek;
+        }
+
+        //Metoda pro hráčovo kolo
+        static int[,] TahHrace(int[,] planek, int[,] hracipole)
+        {
+            int podminkavelikost = 1;
+            int podminkavystreleno = 1;
+            int x = 0;
+            int y = 0;
+            while (podminkavelikost == 1 && podminkavystreleno == 1)
+            {
+                podminkavelikost = 1;
+                podminkavystreleno = 1;
+                Console.WriteLine("Kam chceš střílet na souřanicích X?");
+                x = int.Parse(Console.ReadLine())-1;
+                Console.WriteLine("Kam chceš střílet na souřanicích Y?");
+                y = int.Parse(Console.ReadLine())-1;
+
+                if (hracipole.GetLength(0)>= y && hracipole.GetLength(1)>= x)
+                {
+                    podminkavelikost = 0;
+                    if (planek[y, x] != 1)
+                    {
+                        podminkavystreleno = 0;
+                    }
+                }
+            }
+
+            if (planek[y,x] == 1)
+            {
+                Console.WriteLine("Zásah!");
+                // 5 = zásah
+                hracipole[y, x] = 5;
+            } else
+            {
+                Console.WriteLine("Minul jsi!");
+                hracipole[y, x] = 5;
+            }
+
+            return hracipole;
+           
+
+        }
+
 
         //Metoda na výpis pole
         static void VypisPole(int[,] pole)
