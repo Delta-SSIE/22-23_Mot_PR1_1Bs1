@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Intrinsics.X86;
 
 namespace lode_basic
 {
@@ -10,19 +11,36 @@ namespace lode_basic
             int[,] hracipole = Naplnpole0(4, 4);
 
             hracipole = RozmistLode(hracipole, 4, 1);
+            int pocetlodi = 4;
 
-            for (int i = 0; i < hracipole.GetLength(0); i++)
+            while (true)
             {
-                for (int j = 0; j < hracipole.GetLength(1); j++)
+                Console.WriteLine("HRACÍ PLÁN");
+                VypisPole(planek);
+                Console.WriteLine($"Stávají počet lodí je {pocetlodi}");
+         
+            }
+
+            //Testovací vypsání hracího pole
+            VypisPole(hracipole);
+
+        }
+
+        //Metoda na výpis pole
+        static void VypisPole(int[,] pole)
+        {
+            for (int i = 0; i < pole.GetLength(0); i++)
+            {
+                for (int j = 0; j < pole.GetLength(1); j++)
                 {
-                    Console.Write(hracipole[i, j]);
+                    Console.Write(pole[i, j]);
                 }
                 Console.WriteLine();
 
             }
-
         }
 
+        //Metoda na naplnění pole o zadaných rozměr nulami
         static int[,] Naplnpole0(int x, int y)
         {
             int[,] pole = new int[x, y];
@@ -38,6 +56,8 @@ namespace lode_basic
 
             return pole;
         }
+
+        //Metoda náhodného rozmístění zadaného počtu lodí o zadané velikosti
         static int[,] RozmistLode(int[,] hracpole, int pocetlode, int velikostlode)
         {
             Random generator = new Random();
