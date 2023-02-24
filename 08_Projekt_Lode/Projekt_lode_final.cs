@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Intrinsics.X86;
 
-namespace lode_basic
+namespace lode_enhanced
 {
     internal class Program
     {
@@ -12,24 +12,21 @@ namespace lode_basic
 
             int pocetlodi = 4;
             hracipole = RozmistLode(hracipole, pocetlodi, 1);
-            
 
-            while (pocetlodi>0)
+
+            while (pocetlodi > 0)
             {
-               Console.WriteLine("HRACÍ PLÁN");
-               VypisPole(planek);
-               Console.WriteLine($"Stávají počet lodí je {pocetlodi}");
+                Console.WriteLine("HRACÍ PLÁN");
+                VypisPole(planek);
+                Console.WriteLine($"Stávají počet lodí je {pocetlodi}");
                 //Testovací vypsání hracího pole
                 VypisPole(hracipole);
                 hracipole = TahHrace(planek, hracipole);
                 planek = UpravPlanek(planek, hracipole);
-                pocetlodi = PoctyLodi(hracipole, 1); 
+                pocetlodi = PoctyLodi(hracipole, 1);
                 Console.Clear();
             }
-
             Console.WriteLine("Konec hry!");
-
-
         }
 
         //Metoda pro sčítání počtu lodí na hracím poli
@@ -73,12 +70,16 @@ namespace lode_basic
             int podminkavystreleno = 1;
             int x = 0;
             int y = 0;
-            while (podminkavelikost == 1 && podminkavystreleno == 1)
+            while (podminkavelikost == 1 || podminkavystreleno == 1)
             {
+                podminkavelikost = 1;
+                podminkavystreleno = 1;
                 Console.WriteLine("Kam chceš střílet na souřanicích X?");
-                x = int.Parse(Console.ReadLine())-1;
+                x = int.Parse(Console.ReadLine());
                 Console.WriteLine("Kam chceš střílet na souřanicích Y?");
-                y = int.Parse(Console.ReadLine())-1;
+                y = int.Parse(Console.ReadLine());
+                x--;
+                y--;
 
                 podminkavelikost = Kontrolavelikost(x, y, planek);
                 if (podminkavelikost == 0)
@@ -106,13 +107,14 @@ namespace lode_basic
         //Metoda kontrola velikosti pole, jestli nestřílí mimo
         static int Kontrolavelikost(int x, int y, int[,] pole)
         {
-             if (pole.GetLength(0) >= y && pole.GetLength(1) >= x && y > 0 && x > 0)
+             if (pole.GetLength(0) > y && pole.GetLength(1) > x && y >= 0 && x >= 0)
              {
                 return 0;
                 } else
             {
-                return 1;
                 Console.WriteLine("Dáváš nesmyslné souřadnice!");
+                Console.ReadKey();
+                return 1;
             }
         }
 
@@ -126,8 +128,9 @@ namespace lode_basic
             }
             else
             {
-                return 1;
                 Console.WriteLine("Sem si už střílel!");
+                Console.ReadKey();
+                return 1;
             }
         }
 
