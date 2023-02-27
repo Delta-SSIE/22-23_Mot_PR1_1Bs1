@@ -9,7 +9,7 @@ namespace lode_enhanced
         static void Main(string[] args)
         {
             Console.WriteLine("Vítej ve hře LODĚ");
-            
+
             int velikostpole = -1;
             //While cyklus na vložení velikosti pole, pouští vstupu minimálně o velikosti 2
             while (velikostpole <= 1)
@@ -24,7 +24,7 @@ namespace lode_enhanced
 
             int pocetlodi = 0;
             //While cyklus, který pustí jen hodnotu větší než 0, aby aspon jedna loď existovala a nepustí více lodí než se vejdou do pole!
-            while (pocetlodi <= 0 || pocetlodi > Math.Pow(velikostpole,2))
+            while (pocetlodi <= 0 || pocetlodi > Math.Pow(velikostpole, 2))
             {
                 Console.WriteLine("Zadej počet lodí!");
                 pocetlodi = int.Parse(Console.ReadLine());
@@ -32,24 +32,33 @@ namespace lode_enhanced
 
             hracovopole = VkladejLode(hracovopole, pocetlodi, 1);
             hracipole = RozmistLode(hracipole, pocetlodi, 1);
+            int pocetlodihrac = pocetlodi;
 
-
-            while (pocetlodi > 0)
+            while (pocetlodi > 0 && pocetlodihrac > 0)
             {
                 Console.WriteLine("HRACÍ PLÁN");
                 VypisPole(planek);
                 Console.WriteLine("HRAČOVO POLE");
                 VypisPole(hracovopole);
                 Console.WriteLine($"Stávají počet lodí soupeře {pocetlodi}");
+                Console.WriteLine($"Stávají počet lodí hráče {pocetlodihrac}");
                 //Testovací vypsání hracího pole
-                VypisPole(hracipole);
+                //VypisPole(hracipole);
                 hracipole = TahHrace(planek, hracipole);
                 hracovopole = TahSoupere(hracovopole);
                 planek = UpravPlanek(planek, hracipole);
                 pocetlodi = PoctyLodi(hracipole, 1);
+                pocetlodihrac = PoctyLodi(hracovopole, 1);
                 Console.Clear();
             }
             Console.WriteLine("Konec hry!");
+
+            if (pocetlodi == 0)
+            {
+                Console.WriteLine("Vyhrál hráč!");
+            } else if (pocetlodihrac == 0) {
+                Console.WriteLine("Vyhrál počítač!");
+            }
         }
 
         //Metoda pro kolo soupeře (AI)
@@ -64,12 +73,12 @@ namespace lode_enhanced
             {
                 podminkavelikost = 1;
                 podminkavystreleno = 1;
-                x = souradnice.Next(0, hracipole.GetLength(1) + 1);
-                y = souradnice.Next(0, hracipole.GetLength(0) + 1);
+                x = souradnice.Next(0, hracipole.GetLength(1));
+                y = souradnice.Next(0, hracipole.GetLength(0));
                 podminkavelikost = Kontrolavelikost(x, y, hracipole);
                 if (podminkavelikost == 0)
                 {
-                    podminkavystreleno = Kontrolazasah(x, y, hracipole);
+                    podminkavystreleno = Kontrolazasah(x, y, hracipole, 5);
                 }
             }
             if (hracipole[y, x] == 1)
@@ -117,7 +126,7 @@ namespace lode_enhanced
                     podminkavelikost = Kontrolavelikost(x, y, pole);
                     if (podminkavelikost == 0)
                     {
-                        podminkavystreleno = Kontrolazasah(x, y, pole);
+                        podminkavystreleno = Kontrolazasah(x, y, pole, 1);
                     }
                 }
                 pole[y, x] = velikostlode;
@@ -180,7 +189,7 @@ namespace lode_enhanced
                 podminkavelikost = Kontrolavelikost(x, y, planek);
                 if (podminkavelikost == 0)
                 {
-                    podminkavystreleno = Kontrolazasah(x, y, planek);
+                    podminkavystreleno = Kontrolazasah(x, y, planek, 1);
                 }
             }
 
@@ -218,9 +227,9 @@ namespace lode_enhanced
 
         //Metoda kontrola zásahu, aby nestřílel, kde už bylo vytřeleno
 
-        static int Kontrolazasah(int x, int y, int[,] pole)
+        static int Kontrolazasah(int x, int y, int[,] pole, int typ)
         {
-            if (pole[y, x] != 1)
+            if (pole[y, x] != typ)
             {
                 return 0;
             }
